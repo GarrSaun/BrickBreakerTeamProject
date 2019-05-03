@@ -17,7 +17,7 @@ namespace BrickBreaker
         {
             InitializeComponent();
         }
-        // wow !
+        // wow ! ;D
         private void Form1_Load(object sender, EventArgs e)
         {
              //Start the program centred on the Menu Screen
@@ -29,6 +29,7 @@ namespace BrickBreaker
 
             
         }
+
         public static void ChangeScreen(UserControl current, string next)
         {
             //f is set to the form that the current control is on
@@ -46,7 +47,10 @@ namespace BrickBreaker
                     ns = new GameScreen();
                     break;
                 case "HighScreen":
-                    //ns = new GameScreen();
+                    ns = new HighScreen();
+                    break;
+                case "NameScreen":
+                    ns = new NameScreen1();
                     break;
             }
             //centres on the screen
@@ -54,7 +58,6 @@ namespace BrickBreaker
            
             f.Controls.Add(ns);
             ns.Focus();
-            
         }
     }
 }
