@@ -37,6 +37,7 @@ namespace BrickBreaker
 
         Font scoreFont = new Font("OCR A std", 14, FontStyle.Regular);
         SolidBrush scoreBrush = new SolidBrush(Color.Cyan);
+       
 
         // Paddle and Ball objects
         Paddle paddle, paddle2;
@@ -399,7 +400,7 @@ namespace BrickBreaker
             //Write lives/score
             lifelabel.Text = "Lives: " + lives;
             scoreLabel.Text = "Score: " + score;
-
+            nameLabel.Text = levelName;
             //redraw the screen
             Refresh();
         }
@@ -411,10 +412,12 @@ namespace BrickBreaker
             try
             {
                 brickReader = XmlReader.Create("Resources/Level" + levelNo + ".xml");
+                brickReader.ReadToFollowing("level");
+                levelName = brickReader.GetAttribute("name");
             }
             catch
             {
-                Form1.ChangeScreen(this, "NameScreen");
+                OnEnd();
                 brickReader = XmlReader.Create("Resources/Level1.xml");
             }
 
@@ -487,7 +490,7 @@ namespace BrickBreaker
 
             //draw upper boarder
             e.Graphics.FillRectangle(scoreBrush, 0, 0, this.Width, 40);
-
+            
         }
 
     }

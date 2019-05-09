@@ -48,11 +48,7 @@ namespace BrickBreaker
             title.Location = new Point((this.Width - title.Width) / 2, 130);
         }
 
-		private void showDebug_CheckedChanged(object sender, EventArgs e)
-		{
-			
-		}
-
+		
 		private void nameButton_Click(object sender, EventArgs e)
 		{
 			Form1.ChangeScreen(this, "NameScreen");
