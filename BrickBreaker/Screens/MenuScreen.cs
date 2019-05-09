@@ -50,16 +50,7 @@ namespace BrickBreaker
 
 		private void showDebug_CheckedChanged(object sender, EventArgs e)
 		{
-			if (showDebug.Checked == true)
-			{
-				highButton.Visible = true;
-				nameButton.Visible = true;
-			}
-			else
-			{
-				highButton.Visible = false;
-				nameButton.Visible = false;
-			}
+			
 		}
 
 		private void nameButton_Click(object sender, EventArgs e)
