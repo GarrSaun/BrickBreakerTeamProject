@@ -39,10 +39,20 @@ namespace BrickBreaker
 		{
 //			Form1.highScores.Sort();
 			highScores.Text = "";
-			for (int i = 0; i < 9; i++)
+			for (int i = 0; i < 10; i++)
 			{
-				highScores.Text += i + ". " + Form1.highScores[i].name + " - " + Form1.highScores[i].score + "\n" + "\n";
+				highScores.Text += i+1 + ". " + Form1.highScores[i].name + " - " + Form1.highScores[i].score + "\n" + "\n";
 			}	
 		}
+
+        private void menuButton_Enter(object sender, EventArgs e)
+        {
+            menuButton.BackgroundImage = (Properties.Resources.purpbutton);
+        }
+
+        private void menuButton_Leave(object sender, EventArgs e)
+        {
+            menuButton.BackgroundImage = (Properties.Resources.button);
+        }
     }
 }
