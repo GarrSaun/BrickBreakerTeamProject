@@ -31,7 +31,7 @@ namespace BrickBreaker
 
 
             //Start the program centred on the Menu Screen
-            Cursor.Hide();
+            Cursor.Hide(); 
              MenuScreen ms = new MenuScreen();
              this.Controls.Add(ms);
 
